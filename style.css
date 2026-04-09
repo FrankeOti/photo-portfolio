@@ -1,12 +1,40 @@
 
+/* HEADER */
+.site-header {
+  position: fixed;
+  top: 25px;
+  left: 30px;
+  z-index: 9999;
+}
+
+/* TITLE */
+.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: inherit; /* keeps original color */
+}
+
+.site-title a:hover {
+  opacity: 0.7;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
   box-sizing: border-box;
-  background: #aaa8a8; /* fallback dark base */
-  color: rgb(247, 244, 244);
+  font-family: 'Manrope', sans-serif;
+  background: #111;
+  color: white;
 }
+
 
 /* MENU ICON */
 .menu-icon {
@@ -45,6 +73,10 @@ body {
 
 .menu-icon.active span:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
+}
+
+.site-title.dark {
+  color: black;
 }
 
 /* FULLSCREEN MENU */
@@ -172,4 +204,83 @@ body {
   height: 100%;
   background: rgba(0,0,0,0.2);
 }
+
+
+/* PORTFOLIO SECTION */
+.portfolio {
+  padding: 120px 60px;
+  background: #111;
+}
+
+/* Title */
+.portfolio-title {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+/* GALLERY GRID */
+.gallery {
+  column-count: 3;
+  column-gap: 20px;
+}
+
+/* Images */
+.gallery-item {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Hover effect */
+.gallery-item:hover img {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    column-count: 1;
+  }
+}
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  transform: scale(0.9);
+  transition: 0.3s ease;
+}
+
+.lightbox.show img {
+  transform: scale(1);
+}
+
 
