@@ -310,6 +310,11 @@ body {
     border-radius: 8px;
   }
 
+  .contact-card {
+    grid-template-columns: 1fr;  /*STACK vertically */
+    gap: 30px;
+  }
+
 }
 
 @media (max-width: 600px) {
