@@ -12,8 +12,9 @@
 
   <header class="site-header">
   <h1 class="site-title">
-  <a href="index.html">Frankline Otieno</a>
+  <a href="index.html">FRANKLINE OTIENO</a>
   </h1>
+  <p class="site-subtitle">Emerging Photographer</p>
 </header>
 
   <!-- Menu Icon -->
@@ -38,17 +39,39 @@
 
 
   <!-- Hero Section -->
-  <section class="hero-grid">
+<section class="hero-grid">
 
-  <div class="grid-item"><img src="images/photo1.jpg" alt=""></div>
-  <div class="grid-item"><img src="images/photo2.jpg" alt=""></div>
-  <div class="grid-item"><img src="images/photo3.jpg" alt=""></div>
-  <div class="grid-item"><img src="images/photo4.jpg" alt=""></div>
-  <div class="grid-item large"><img src="images/photo5.jpg" alt=""></div>
+<div class="grid-item fade-in">
+  <img src="images/photo6.jpg" loading="lazy" class="lightbox-item">
+</div>
+
+<div class="grid-item fade-in">
+  <img src="images/photo2.jpg" loading="lazy" class="lightbox-item">
+</div>
+
+<div class="grid-item fade-in">
+  <img src="images/photo3.jpg" loading="lazy" class="lightbox-item">
+</div>
+
+<div class="grid-item fade-in">
+  <img src="images/photo4.jpg" loading="lazy" class="lightbox-item">
+</div>
+
+<div class="grid-item fade-in">
+  <img src="images/photo18.jpg" loading="lazy" class="lightbox-item">
+</div>
+
+<div class="grid-item fade-in">
+  <img src="images/photo10.jpg" loading="lazy" class="lightbox-item">
+</div>
+
+<div class="grid-item large fade-in">
+  <img src="images/photo5.jpg" loading="lazy" class="lightbox-item">
+</div>
+
 
 </section>
 
-<script src="script.js"></script>
 
 <footer class="footer">
     <p>&copy; 2026 Frankline Otieno. All rights reserved.</p>
@@ -59,6 +82,19 @@
         <a href="https://instagram.com/w._frankie" target="_blank"><i class="fab fa-instagram"></i></a>
     </p>
 </footer>
+
+<div class="lightbox" id="lightbox">
+
+  <span class="close" onclick="closeLightbox()">&times;</span>
+
+  <img id="lightbox-img">
+
+  <div class="nav prev" onclick="changeSlide(-1)">&#10094;</div>
+  <div class="nav next" onclick="changeSlide(1)">&#10095;</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>

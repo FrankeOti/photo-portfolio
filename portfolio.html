@@ -12,8 +12,9 @@
    
    <header class="site-header">
     <h1 class="site-title">
-    <a href="index.html">Frankline Otieno</a>
+    <a href="index.html">FRANKLINE OTIENO</a>
     </h1>
+    <p class="site-subtitle">Emerging Photographer</p>
   </header>
 
     <!-- Menu Icon -->
@@ -42,11 +43,87 @@
   <div class="gallery">
 
   <div class="gallery-item">
-    <img src="images/photo1.jpg" loading="lazy" onclick="openLightbox(this)">
+    <img src="images/photo21.jpg" loading="lazy" class="lightbox-item">
   </div>
 
   <div class="gallery-item">
-    <img src="images/photo2.jpg" loading="lazy" onclick="openLightbox(this)">
+    <img src="images/photo20.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo19.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo18.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo17.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo16.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo15.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo14.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo13.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo12.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo11.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo10.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo9.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo8.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo7.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo6.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo5.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo4.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo3.jpg" loading="lazy" class="lightbox-item">
+  </div>
+  
+    <div class="gallery-item">
+    <img src="images/photo2.jpg" loading="lazy" class="lightbox-item">
+  </div>
+
+  <div class="gallery-item">
+    <img src="images/photo1.jpg" loading="lazy" class="lightbox-item">
   </div>
 
   <!-- repeat for all images -->
@@ -57,11 +134,17 @@
 </section>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<div class="lightbox" id="lightbox">
+
+  <span class="close" onclick="closeLightbox()">&times;</span>
+
   <img id="lightbox-img">
+
+  <div class="nav prev" onclick="changeSlide(-1)">&#10094;</div>
+  <div class="nav next" onclick="changeSlide(1)">&#10095;</div>
+
 </div>
 
-<script src="script.js"></script>
 
 <footer class="footer">
     <p>&copy; 2026 Frankline Otieno. All rights reserved.</p>
@@ -72,6 +155,8 @@
         <a href="https://instagram.com/w._frankie" target="_blank"><i class="fab fa-instagram"></i></a>
     </p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -8,24 +8,53 @@ function toggleMenu(icon) {
   title.classList.toggle("dark");
 }
 
+const faders = document.querySelectorAll(".fade-in");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+faders.forEach(el => observer.observe(el));
 
 
-function openLightbox(img) {
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
+let currentIndex = 0;
+const images = document.querySelectorAll(".lightbox-item");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
 
-  lightbox.style.display = "flex";
-  setTimeout(() => lightbox.classList.add("show"), 10);
+// OPEN LIGHTBOX
+images.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    currentIndex = index;
+    showImage();
+    lightbox.style.display = "flex";
+  });
+});
 
-  lightboxImg.src = img.src;
+// SHOW IMAGE
+function showImage() {
+  lightboxImg.src = images[currentIndex].src;
 }
 
+// CLOSE
 function closeLightbox() {
-  const lightbox = document.getElementById("lightbox");
-  lightbox.classList.remove("show");
-
-  setTimeout(() => {
-    lightbox.style.display = "none";
-  }, 300);
+  lightbox.style.display = "none";
 }
+
+// NAVIGATION
+function changeSlide(direction) {
+  currentIndex += direction;
+
+  if (currentIndex < 0) currentIndex = images.length - 1;
+  if (currentIndex >= images.length) currentIndex = 0;
+
+  showImage();
+}
+
 
