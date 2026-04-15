@@ -44,6 +44,7 @@
 
 html, body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -59,6 +60,19 @@ body {
   font-family: 'Manrope', sans-serif;
   background: #e5e5e5;
   color: #111;
+}
+
+.intro {
+  max-width: 600px;
+  margin: 10px auto 10px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(0,0,0,0.7);
 }
 
 
@@ -137,6 +151,12 @@ body {
 /* Menu links */
 .menu-content {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
 }
 
 .menu-content a {
@@ -173,7 +193,7 @@ body {
 /* GRID HERO */
 .hero-grid {
   display: grid;
-  margin-top: 10px; /* creates space below header */
+  margin-top: 15px; /* creates space below header */
   margin-bottom: 10px;
   padding: 0 5px; /* adds side breathing space */
   grid-template-columns: repeat(3, 1fr);
@@ -481,6 +501,7 @@ body {
     font-size: 24px;
     margin: 15px 0;
     padding: 10px 0;
+    line-height: 1.0;
   }
 
   .gallery-item img {
@@ -502,6 +523,9 @@ body {
 
   .hero-grid {
     grid-template-columns: 1fr;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 0 15px;
   }
 
   .large {
@@ -512,6 +536,11 @@ body {
   .credits {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .footer {
+    width: 100%;
+    padding: 20px;
   }
 
 }
@@ -607,6 +636,28 @@ body {
   letter-spacing: 0.3px;
 }
 
+.home-cta {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.home-cta p {
+  font-size: 18px;
+  color: rgba(0,0,0,0.6);
+  margin-bottom: 10px;
+}
+
+.home-cta a {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #111;
+  border-bottom: 1px solid #111;
+  padding-bottom: 2px;
+}
+
+
 /* FOOTER */
 .footer {
     background: #2a2a2a;;
@@ -615,6 +666,8 @@ body {
     padding: 1px 1px;
     margin-top: auto;
     font-size: 1.0rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer a {
