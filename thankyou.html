@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+  
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <h1 class="site-title">
+      <a href="index.html">FRANKLINE OTIENO</a>
+    </h1>
+  </header>
+
+  <!-- CONTENT -->
+  <div class="thankyou-container">
+    <div class="thankyou-content">
+      <h1>Message Sent</h1>
+      <p>
+        Thank you for reaching out.  
+        I’ll get back to you as soon as possible.
+      </p>
+
+      <a href="index.html" class="back-home">
+        Back to Home
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Frankline Otieno. All rights reserved.</p>
+    <p>
+        <a href="mailto:otienofranklineldk@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/frankline-otieno-1486152a8" target="_blank"><i class="fab fa-linkedin"></i></a> 
+        <a href="https://github.com/FrankeOti" target="_blank"><i class="fab fa-github"></i></a> 
+        <a href="https://instagram.com/w._frankie" target="_blank"><i class="fab fa-instagram"></i></a>
+    </p>
+  </footer>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    body {
+      background-color: #e5e5e5;
+      color: #111;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    .site-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 40px;
+      background: rgba(229,229,229,0.85);
+      backdrop-filter: blur(10px);
+    }
+
+    .site-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 25px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: none;
+      color: black;
+}
+
+    .site-title a {
+      font-family: 'Playfair Display', serif;
+      text-decoration: none;
+      color: #111;
+    }
+
+    /* MAIN CONTENT */
+    .thankyou-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .thankyou-content {
+      max-width: 500px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    .thankyou-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .thankyou-content p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: rgba(0,0,0,0.7);
+      margin-bottom: 30px;
+    }
+
+    .thankyou-content a {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-decoration: none;
+      color: #111;
+      border-bottom: 1px solid #111;
+      padding-bottom: 2px;
+    }
+
+    @keyframes fadeIn {
+       to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+}
+    /* BACK LINK */
+    .back-home {
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      color: #111;
+      border-bottom: 1px solid #111;
+      padding-bottom: 2px;
+      transition: opacity 0.3s ease;
+    }
+
+    
+    .back-home:hover {
+      opacity: 0.6;
+    }
+
+    /* FOOTER */
+.footer {
+    background: #2a2a2a;;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 17px 17px;
+    margin-top: auto;
+    font-size: 1.0rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer p:first-child {
+  margin-bottom: 15px;
+}
+
+.footer a {
+    color: #fbbf24;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Footer social icons */
+.footer i {
+    margin: 0 2px;
+    font-size: 1.1rem;
+    vertical-align: middle;
+    color: #fbbf24;
+    transition: color 0.3s;
+}
+
+.footer i:hover {
+    color: #ffffff;
+}
+
+</style>
+
+</body>
+</html>
