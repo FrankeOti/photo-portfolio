@@ -451,6 +451,36 @@ body {
   transform: translateY(-2px);  /* subtle lift on hover */
 }
 
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+
+  display: none;
+  animation: spin 0.6s linear infinite;
+  margin: 0 auto;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-primary.loading .btn-text {
+  display: none;
+}
+
+.btn-primary.loading .spinner {
+  display: inline-block;
+  opacity: 1;
+}
+
 
 @media (max-width: 900px) {
   .gallery {

@@ -58,9 +58,14 @@ function changeSlide(direction) {
 }
 
 const form = document.querySelector(".contact-form");
+const button = document.getElementById("submit-btn");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+
+  // 👇 activate loading state
+  button.classList.add("loading");
+  button.disabled = true;
 
   const data = new FormData(form);
 
@@ -71,10 +76,15 @@ form.addEventListener("submit", async (e) => {
   });
 
   if (response.ok) {
-    window.location.href = "thankyou.html";  // 👈 redirect here
+    window.location.href = "thankyou.html";
   } else {
     alert("Something went wrong.");
+
+    // 👇 reset button if error
+    button.classList.remove("loading");
+    button.disabled = false;
   }
 });
+
 
 
